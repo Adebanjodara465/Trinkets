@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body{
+    background-color: #ecebea;
+    font-family: 'Exo 2', sans-serif;
+}
+
+
+.navbar{
+    padding: 10px 25px;
+    background-color: #ecebea;
+    box-shadow: 0px 1px 1px;
+}
+
+.navbardiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position:relative;
+}
+
+.navlinks{
+    list-style: none;
+    display:flex;
+    align-items: center;
+    gap:20px;
+}
+
+.navlinks li a{
+    text-decoration: none;
+    color:black;
+    font-weight:bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.navlinks li a:hover{
+    color: #144900;
+}
+
+/* Hamburgere */
+.menu-toggle{
+display:none;
+}
+
+.hamburger{
+    display:none;
+    flex-direction:column;
+    cursor:pointer;
+    gap: 5px;
+}
+
+.hamburger span{
+    width: 25px;
+    height:3px;
+    background-color:#144900;
+    border-radius: 2px;
+}
+
+/*To show on small screens */
+@media (max-width: 786px){
+    .hamburger{
+        display: flex;
+    }
+
+    .navlinks{
+        display:none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 60px;
+        right: 25px;
+        gap:10px;
+        background-color: white;
+        border:1px solid #ccc;
+        padding:10px;
+    }
+
+    .menu-toggle:checked + .hamburger +.navlinks {
+        display:flex;
+    }
+}
+
+.section-hero {
+    display: flex;
+    flex-flow: column;
+    margin:0px;
+    padding: 20px 20px; 
+}
+
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    padding: 0px 70px;
+}
+
+#head{
+    color: #2B6D12;
+    font-size: 40px;
+}
+
+
+/*The tiny profile pics */
+.hero-text{
+  display:flex;
+  align-items: flex-start;
+  align-self: flex-start;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#image-box{
+   display: flex;
+}
+
+.hero-description{
+   font-size: 25px;
+    max-width:400px;
+}
+
+#pics{
+    display:flex;
+    flex-direction: row;
+    
+}
+
+#pic{
+    border-radius: 100px;
+    border: 3px solid black;
+    margin: -11px;
+}
+
+.hero-btn{
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    background-color:  #2B6D12;
+    margin: 5px;
+}
+.deliveredtext{
+    gap: 50px;
+}
+
+.delivered{
+    display: flex;
+    align-content: flex-start;
+    align-items: center;
+    gap: 50px;
+}
+
+
+h5{
+    text-align: center;
+}
+
+.products-text{
+    text-align:center;
+}
+
+.productsdiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container{
+    padding: 900px, 40px, 40px, 900px;
+    background-color: white;
+    margin: 5px;
+}
