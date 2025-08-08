@@ -168,13 +168,78 @@ h5{
     text-align:center;
 }
 
-.productsdiv{
+
+.product-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
 }
 
 .container{
-    padding: 900px, 40px, 40px, 900px;
-    background-color: white;
+    width:350px;
+    height: 500px;
+    background-color: #A5DA91;
+    border-radius: 8px;
+    overflow: hidden;   /*Maybe i can do something about that hero with this too */
+    box-shadow: 0px 2px 5px rgba(115, 181, 91, 0.9);
+    margin:20px;
+}
+
+
+.container:hover{
+    width:350px;
+    height: 500px;
+    background-color: #A5DA91;
+    border: 2px solid white;
+    transform: scale(1) translateY(-20px);
+    transition: 0.7s;
+    border-radius: 8px;
+    overflow: hidden;   /*Maybe i can do something about that hero with this too */
+    box-shadow: 0px 8px 5px rgba(115, 181, 91, 0.9);
+    margin:20px;
+}
+
+.container img{
+    width: 100%;
+    height: auto;
+}
+   
+.container-content{
+    padding: 16px;
     margin: 5px;
+    text-align: center;
+}
+
+.container-content h6{
+    font-size: 16px;
+    margin-bottom: 8px;
+   color: white;
+   font-weight: bold;
+}
+
+.container-content a{
+    font-size: 17px;
+    color: #144900;
+    text-decoration: none;
+}
+
+.container-content a:hover{
+    font-size: 20px;
+    transition: 0.3s;
+    color: white;
+    text-decoration: none;
+}
+
+#more{
+    text-align: center;
+    text-decoration: none;
+    color: #144900; 
+    font-weight: bold;
+}
+
+#more:hover{
+    color: white; 
+    background-color: #144900;
+    font-weight: bold;
 }
