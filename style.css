@@ -89,49 +89,60 @@ display:none;
 }
 
 .section-hero {
-    display: flex;
-    flex-flow: column;
-    margin:0px;
-    padding: 20px 20px; 
+    width: 100%;
+    min-height: 100vh;
 }
-
 
 .hero{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-    padding: 0px 70px;
+   width: 85%;
+   display:block;
+   margin: auto;
+   padding-top:90px;
 }
-
-#head{
-    color: #2B6D12;
+.hero-content{
+    float: left;
+    width: 55%;
+}
+.title{
+    color: #144900;
     font-size: 40px;
+} 
+
+.hero-content .description{
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 1.5;
 }
 
+.hero-content .hero-btn{
+    margin: 40px 30px 60px 0px;
+}
+
+.hero-content .delivered{
+    margin: 0px 0px 0px 60px;
+}
+
+.delivered .deliveredtext{
+    float: right;
+    margin: 0px 0px 0px 60px;
+}
+
+.image-box{
+    float: right;
+    width:42%;
+}
+
+.image-box img{
+    height: auto;
+    width:100%;
+    /*shadow?*/
+}
 
 /*The tiny profile pics */
-.hero-text{
-  display:flex;
-  align-items: flex-start;
-  align-self: flex-start;
-  flex-direction: column;
-  gap: 20px;
-}
-
-#image-box{
-   display: flex;
-}
-
-.hero-description{
-   font-size: 25px;
-    max-width:400px;
-}
 
 #pics{
     display:flex;
     flex-direction: row;
-    
 }
 
 #pic{
@@ -148,20 +159,39 @@ display:none;
     background-color:  #2B6D12;
     margin: 5px;
 }
+
+.hero-btn:hover{
+    border: 2px solid  #2B6D12;
+    background-color: white;
+    color:  #2B6D12;
+    font-weight: bold;
+}
+
+#hero-icon{
+    border: none;
+    border-radius: 10px;
+    padding: 10px 10px;
+    color: white;
+    background-color:  #2B6D12;
+    margin: 5px;
+}
+
+#hero-icon:hover{
+    border: 2px solid  #2B6D12;
+    background-color: white;
+    color: #2B6D12;
+    font-weight: bold;
+}
+
 .deliveredtext{
     gap: 50px;
+   
 }
-
-.delivered{
-    display: flex;
-    align-content: flex-start;
-    align-items: center;
-    gap: 50px;
-}
-
 
 h5{
     text-align: center;
+    color: #2B6D12;
+    font-size: 15px;
 }
 
 .products-text{
