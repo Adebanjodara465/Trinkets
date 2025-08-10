@@ -64,6 +64,10 @@ display:none;
     border-radius: 2px;
 }
 
+.navbardiv img{
+    margin-left: 70px;
+}
+
 /*To show on small screens */
 @media (max-width: 786px){
     .hamburger{
@@ -85,6 +89,7 @@ display:none;
 
     .navbardiv img{
          width:100px;
+         margin: 0px;
     }
 
     .menu-toggle:checked + .hamburger +.navlinks {
@@ -137,7 +142,6 @@ display:none;
     margin-left: 30px;
 }
 
-
 .image-box{
     float: right;
     width:42%;
@@ -169,18 +173,21 @@ display:none;
     font-weight: bold;
     background-color:  #2B6D12;
     margin: 5px;
+    transition: 1s;
 }
 
 .hero-btn:hover{
-    border: 2px solid  #2B6D12;
+    transition: 1s;
+    box-shadow: 0 0 0 2px #2B6D12 inset;
     background-color: white;
     color:  #2B6D12;
     font-weight: bold;
 }
 
 #hero-icon{
+    transition: 1s;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 10px 10px;
     color: white;
     background-color:  #2B6D12;
@@ -188,7 +195,8 @@ display:none;
 }
 
 #hero-icon:hover{
-    border: 2px solid  #2B6D12;
+    transition: 1s;
+    box-shadow: 0 0 0 2px #2B6D12 inset;
     background-color: white;
     color: #2B6D12;
     font-weight: bold;
@@ -203,7 +211,7 @@ display:none;
     }
     .hero-content{
        float: none;
-       width: 55%;
+       width: 100%;
    }
     .image-box{
        margin-top: 25px;
@@ -211,19 +219,19 @@ display:none;
        width:100%;
     }
     .title{
+        text-align: center;
         font-size: 35px;
     }
-
+    .hero-btn{
+        align-self: center;
+    }
 }
 
 h5{
+    margin-top: 50px;
     text-align: center;
-    color: #2B6D12;
+    color: #A5DA91;
     font-size: 15px;
-}
-
-.products{
-     background-color: white;
 }
 
 .products-text{
@@ -246,6 +254,7 @@ h5{
     height: 500px;
     background-color: #A5DA91;
     border-radius: 8px;
+    transition: 0.7s;
     overflow: hidden;   /*Maybe i can do something about that hero with this too */
     box-shadow: 0px 2px 5px rgba(115, 181, 91, 0.9);
     margin:20px;
@@ -304,21 +313,22 @@ h5{
     font-weight: bold;
 }
 
-#more:hover{
-    color: white; 
-    background-color: #144900;
-    font-weight: bold;
+#more:hover{ 
+    transform: scale(1.1);
+    transition: 1.4s;
 }
 
 h2{
-    margin-left: 20px;
+    margin-top: 30px;
+    text-align: center;
+    color: #2B6D12;
 }
 
 .testimonials-container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 100px;
+    margin-top: 70px;
 }
 
 .tcontainer{
@@ -348,10 +358,6 @@ h2{
 .praise span{
     font-weight: bold;
     color: #A5DA91;
-}
-
-.pricing{
-    background-color: white;
 }
 
 .pricing-container{
@@ -419,17 +425,142 @@ h2{
 }
 
 .info{
-    margin-top: 20px;
+    margin: 20px 0px 60px 0px;
     text-align: center;
 }
 
 .words{
+    margin: 0px 4px 0px 4px;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .words div{
     padding: 5px;
-    margin: 5px;
+    max-width: 500px;
+    background-color: rgba(43, 109, 18, 0.2);
+    margin: 2px;
+}
+
+.words h4{
+    padding: 5px;
+    color: #2B6D12;
+}
+
+.words p{
+    padding: 5px;
+}
+
+.words i{
+    padding: 5px;
+    color: #144900;
+}
+
+.CARD{
+    margin: 30px 110px 30px 110px;
+    padding: 50px;
+    background-color: #144900;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.CARD-text{
+    margin-bottom: 50px;
+}
+
+.CARD-text h3{
+
+    margin-bottom: 15px;
+    font-size: 40px;
+    color: white;
+}
+
+.CARD-text p{
+    font-size: 20px;
+    color: #afe09c;
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px 20px 20px;
+}
+
+form div label{
+    color: #afe09c;
+    margin-bottom: 10px;
+}
+
+form div input{
+    color: #144900;
+    font-weight: bold;
+    width: 55%;
+    height: 50px;
+    padding-left: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 0 3px #A5DA91 inset;
+    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.5);
+    border:  3px solid #A5DA91 ;
+}
+
+form div select{
+    width: 55%;
+    height: 50px;
+    padding-left: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 0 3px #A5DA91 inset;
+    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.5);
+    border:  3px solid #A5DA91 ;
+}
+
+.CARD-btn{
+    border: none;
+    padding: 10px 20px;
+    color: #2B6D12;
+    font-weight: bold;
+    background-color: white;
+    margin-left: 30px;
+    border-radius: 12px;
+    transition: 1s;
+}
+
+.CARD-btn:hover{
+    transform: scale(1.1);
+    transition: 1s;
+    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.5);
+    background-color: #A5DA91;
+    color: white;
+    font-weight: bold;
+}
+
+.footer-div{
+    margin: 0px 4px 0px 4px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-div div p{
+    margin-top: 20px;
+    align-items: start;
+    padding: 5px;
+    max-width: 500px;
+    margin: 2px;
+}
+
+.end {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.footer-div i{
+    color: #2B6D12;
+    transition: 1s;
+    margin: 3px;
+}
+
+.footer-div i:hover{
+    color: #A5DA91;
+    transform: scale(1.1);
+    transition: 1s;
 }
