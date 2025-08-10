@@ -83,6 +83,10 @@ display:none;
         padding:10px;
     }
 
+    .navbardiv img{
+         width:100px;
+    }
+
     .menu-toggle:checked + .hamburger +.navlinks {
         display:flex;
     }
@@ -91,6 +95,7 @@ display:none;
 .section-hero {
     width: 100%;
     min-height: 100vh;
+    margin-bottom: 40px;
 }
 
 .hero{
@@ -99,13 +104,15 @@ display:none;
    margin: auto;
    padding-top:90px;
 }
+
 .hero-content{
     float: left;
     width: 55%;
 }
+
 .title{
     color: #144900;
-    font-size: 40px;
+    font-size: 50px;
 } 
 
 .hero-content .description{
@@ -118,14 +125,18 @@ display:none;
     margin: 40px 30px 60px 0px;
 }
 
-.hero-content .delivered{
-    margin: 0px 0px 0px 60px;
+
+.delivered{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 0px;
 }
 
-.delivered .deliveredtext{
-    float: right;
-    margin: 0px 0px 0px 60px;
+.delivered-text p {
+    margin-left: 30px;
 }
+
 
 .image-box{
     float: right;
@@ -139,15 +150,15 @@ display:none;
 }
 
 /*The tiny profile pics */
-
-#pics{
-    display:flex;
+.pics {
+    display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 #pic{
     border-radius: 100px;
-    border: 3px solid black;
+    border: 3px solid #A5DA91;
     margin: -11px;
 }
 
@@ -183,9 +194,26 @@ display:none;
     font-weight: bold;
 }
 
-.deliveredtext{
-    gap: 50px;
-   
+@media screen and (max-width: 768px){
+   .hero{
+      width: 85%;
+      display:block;
+      margin: auto;
+      padding-top:50px;
+    }
+    .hero-content{
+       float: none;
+       width: 55%;
+   }
+    .image-box{
+       margin-top: 25px;
+       float: none;
+       width:100%;
+    }
+    .title{
+        font-size: 35px;
+    }
+
 }
 
 h5{
@@ -194,16 +222,23 @@ h5{
     font-size: 15px;
 }
 
+.products{
+     background-color: white;
+}
+
 .products-text{
     text-align:center;
 }
 
+.products-head h5{
+    margin-top: 50px;
+}
 
 .product-container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 100px;
+    margin-top: 100px 0 20px;  /*i kept having issues with mu #more, had to fix it with the section side */
 }
 
 .container{
@@ -215,7 +250,6 @@ h5{
     box-shadow: 0px 2px 5px rgba(115, 181, 91, 0.9);
     margin:20px;
 }
-
 
 .container:hover{
     width:350px;
@@ -262,6 +296,8 @@ h5{
 }
 
 #more{
+    display:block;
+    margin: 20px auto 0;
     text-align: center;
     text-decoration: none;
     color: #144900; 
@@ -272,4 +308,128 @@ h5{
     color: white; 
     background-color: #144900;
     font-weight: bold;
+}
+
+h2{
+    margin-left: 20px;
+}
+
+.testimonials-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.tcontainer{
+    width:380px;
+    height: 280px;
+    color: white;
+    background-color: #2B6D12;
+    border-radius: 8px;
+    overflow: hidden;   /*Maybe i can do something about that hero with this too */
+    box-shadow: 0px 2px 5px rgba(115, 181, 91, 0.9);
+    margin:20px;
+}
+
+#tpic{
+    border-radius: 40px;
+    border: 2px solid white;
+    margin: 20px;
+}
+
+.praise p{
+    line-height: 1.4;
+    text-align: center;
+    padding: 0px 10px 0px 10px;
+    text-wrap: wrap;
+}
+
+.praise span{
+    font-weight: bold;
+    color: #A5DA91;
+}
+
+.pricing{
+    background-color: white;
+}
+
+.pricing-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pcontainer{
+    width: 400px;
+    height: 250px;
+    background-color:#A5DA91;
+    border-radius: 12px;
+    margin: 20px;
+    padding:20px;
+    text-align: center;
+    box-shadow: 0 0 0 3px #2B6D12 inset;
+}
+
+#installments{
+    position: relative;
+    background-color: #144900;
+    box-shadow: 0 0 0 3px #A5DA91 inset;
+}
+
+#installments h6{
+    color: #A5DA91;
+}
+
+
+#installments small{
+    color: #A5DA91;
+}
+
+.ribbon{   /*that tag indicator for the installment plan */
+    position: absolute;
+    top: 10px;
+    text-align: center;
+    right: -2px;
+    background-color: #f4b400;
+    color: black;
+    font-weight: bold;
+    padding: 0px 40px;
+    font-size: 12px;
+    width: 200px;
+}
+
+.pcontainer h6{
+    margin-top: 40px;
+    text-transform: capitalize;
+    color: #2B6D12 ;
+    font-size: 25px;
+}
+
+.pcontainer p{
+    text-transform: capitalize;
+    color: white;
+    font-size: 30px;
+    padding: 20px;
+}
+
+.pcontainer small{
+    text-transform: capitalize;
+    color: #2B6D12;
+}
+
+.info{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.words{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.words div{
+    padding: 5px;
+    margin: 5px;
 }
